@@ -1,0 +1,96 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=2.5cm]{geometry}
+\usepackage{helvet} 
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{setspace}
+\onehalfspacing 
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{caption}
+\renewcommand{\LTcaptype}{figure}
+
+
+% Configuración global de márgenes internos para todas las tablas
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.25}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\setlength{\parindent}{0pt}
+
+% Evitar la separación de palabras en sílabas y mantener justificado
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+
+% Configurar \paragraph y \subsubsubsection con salto de línea (no en línea)
+\makeatletter
+    \renewcommand\paragraph{
+        \@startsection{paragraph}{4}{\z@}%
+            {-3.25ex\@plus -1ex \@minus -.2ex}%
+            {1.5ex \@plus .2ex}%
+            {\normalfont\normalsize\bfseries}
+    }
+    \newcommand{\subsubsubsection}{\paragraph}
+\makeatother
+
+
+
+\begin{document}
+
+% --- PORTADA ---
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    {\large Universidad Nacional del Nordeste} \\
+    {\large Facultad de Ciencias Exactas y Naturales y Agrimensura} \\
+    \vspace{2cm}
+    {\LARGE \textbf{Proyecto Integrador: Sistema de Administración de Consorcio}} \\
+    \vspace{1cm}
+    {\large Licenciatura en Sistemas de Información} \\
+    \vspace{2cm}
+    \vspace{2cm}
+    \begin{flushleft}
+        \textbf{Profesora:} Lic. Laura Gomez Solis \\
+        \textbf{Integrantes:} \\
+        \begin{itemize}
+            \item Escobar, Lucas Joel
+            \item Fernandez, Gabriel Elías
+            \item Kern, Nicolás
+            \item Solis Schneeberger, Matias
+        \end{itemize}
+    \end{flushleft}
+    \vfill
+    \vfill
+    {\large Corrientes, 2026}
+\end{titlepage}
+
+%--- ÍNDICES ---
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+
+%------------------ Introducción ------------------
+\input{sections/introduccion}
+%--------------------------------------------------
+\newpage
+
+%------------------ Metodología ------------------
+\input{sections/metodologia}
+%--------------------------------------------------
+\newpage
+
+%------------------ Herramientas ------------------
+\input{sections/herramientas}
+%--------------------------------------------------
+
+\end{document}

@@ -1,0 +1,354 @@
+\subsection{2.4 - Análisis de Riesgos}
+
+La gestión de riesgos constituye un proceso fundamental para asegurar el éxito del presente proyecto, permitiendo la identificación, análisis y mitigación proactiva de los factores que podrían comprometer sus objetivos. Dada la naturaleza dinámica de nuestro ``Sistema de Administración de Consorcios'', el enfoque adoptado se basa en un marco de trabajo continuo que abarca cuatro etapas críticas: la identificación de amenazas potenciales para el negocio, el producto y el cronograma del proyecto; el análisis cualitativo de su probabilidad e impacto; la planificación de estrategias de prevención y contingencia; y, finalmente, la supervisión constante para ajustar las medidas de control según la evolución del desarrollo.  
+
+Este análisis permite al equipo anticipar posibles dificultades, optimizar la asignación de recursos y garantizar la calidad y fiabilidad del software final frente a incertidumbres tanto técnicas como organizacionales.
+
+\begin{figure}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{|p{5cm}|p{3cm}|X|}
+    \hline
+            \textbf{Riesgo} 
+        
+        & 
+        
+            \textbf{Tipo} 
+        
+        & 
+        
+            \textbf{Descripción} 
+        
+    \\ \hline
+    
+            \textbf{Error en cálculos financieros} 
+        
+        & 
+        
+            Producto 
+        
+        & 
+        
+            Errores en la lógica del prorrateo automático de expensas o en el cálculo de intereses por mora. 
+        
+    \\ \hline
+    
+            \textbf{Falla en seguridad de datos} 
+        
+        & 
+        
+            Producto 
+        
+        & 
+        
+            Acceso no autorizado o filtración de datos sensibles de los vecinos y registros del Libro de Visitas. 
+        
+    \\ \hline
+    
+                \textbf{Falla de integración de pagos} 
+        
+        & 
+        
+            Proyecto (producto) 
+        
+        & 
+        
+            Problemas técnicos al conectar el sistema con la pasarela de pagos para la generación de recibos. 
+        
+    \\ \hline
+    
+            \textbf{Nuevos requerimientos del cliente} 
+        
+        & 
+        
+            Negocio 
+        
+        & 
+        
+            Solicitud de cambios o nuevas funciones (ej. agregar un módulo de votación a mitad del desarrollo). 
+        
+    \\ \hline
+    
+            \textbf{Baja adopción tecnológica} 
+        
+        & 
+        
+            Negocio 
+        
+        & 
+        
+            Resistencia de los vecinos (especialmente adultos mayores) a utilizar la aplicación para reservas o pagos. 
+        
+    \\ \hline
+    
+            \textbf{Falta de experiencia técnica} 
+        
+        & 
+        
+            Proyecto 
+        
+        & 
+        
+            Dificultad para manejar las herramientas de desarrollo elegidas para el módulo de notificaciones push. 
+        
+    \\ \hline
+    
+            \textbf{Interfaz poco intuitiva} 
+        
+        & 
+        
+            Producto 
+        
+        & 
+        
+            Diseño de pantallas confuso que dificulte la carga de tickets de mantenimiento por parte del vecino. 
+        
+    \\ \hline
+    
+            \textbf{Ausencia de integrantes} 
+        
+        & 
+        
+            Proyecto 
+        
+        & 
+        
+            Inasistencia de un miembro del equipo por razones de salud o personales durante las fechas de entrega. 
+        
+    \\ \hline
+    \end{tabularx}
+    \caption{Tabla de los riesgos que se pensaron}
+\end{figure}
+
+Tras la identificación, se procede a la valoración cualitativa de cada riesgo (Probabilidad y Seriedad). Finalmente, se define el plan de gestión y la estrategia de mitigación para cada uno.
+
+\begin{figure}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{|X|l|l|}
+    \hline
+            \textbf{Riesgo} 
+        
+        & 
+        
+            \textbf{Probabilidad} 
+        
+        & 
+        
+            \textbf{Seriedad} 
+        
+    \\ \hline
+    
+            \textbf{Falla de seguridad de datos} 
+        
+        & 
+        
+            Baja 
+        
+        & 
+        
+            Alta 
+        
+    \\ \hline
+    
+            \textbf{Error en cálculos financieros} 
+        
+        & 
+        
+            Media 
+        
+        & 
+        
+            Alta 
+        
+    \\ \hline
+    
+            \textbf{Ausencia de integrantes} 
+        
+        & 
+        
+            Media 
+        
+        & 
+        
+            Alta 
+        
+    \\ \hline
+    
+            \textbf{Nuevos requerimientos del cliente} 
+        
+        & 
+        
+            Alta 
+        
+        & 
+        
+            Media 
+        
+    \\ \hline
+    
+            \textbf{Baja adopción tecnológica} 
+        
+        & 
+        
+            Media 
+        
+        & 
+        
+            Media 
+        
+    \\ \hline
+    
+            \textbf{Falla de integración de pagos} 
+        
+        & 
+        
+            Alta 
+        
+        & 
+        
+            Media 
+        
+    \\ \hline
+    
+            \textbf{Falta de experiencia técnica} 
+        
+        & 
+        
+            Media 
+        
+        & 
+        
+            Baja 
+        
+    \\ \hline
+    
+            \textbf{Interfaz poco intuitiva} 
+        
+        & 
+        
+            Baja 
+        
+        & 
+        
+            Baja 
+        
+    \\ \hline
+    \end{tabularx}
+    \caption{Tabla con las probabilidades y seriedad de los riesgos}
+\end{figure}
+
+A continuación, se detalla la estrategia de gestión y el plan de acción específico para la prevención o mitigación de cada riesgo.
+
+\begin{figure}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{|p{5.5cm}|p{2.5cm}|X|}
+    \hline
+        \textbf{Riesgo} 
+        
+        & 
+        
+            \textbf{Estrategia} 
+        
+        & 
+        
+            \textbf{Plan de Gestión (Detalle)} 
+        
+    \\ \hline
+    
+            \textbf{Falla de seguridad de datos} 
+        
+        & 
+        
+            Prevención 
+        
+        & 
+        
+            Implementar cifrado de datos sensibles y auditorías de acceso desde la fase de diseño. 
+        
+    \\ \hline
+    
+            \textbf{Error en cálculos financieros} 
+        
+        & 
+        
+            Prevención 
+        
+        & 
+        
+            Realizar pruebas unitarias intensivas sobre la lógica del prorrateo y validaciones cruzadas. 
+        
+    \\ \hline
+    
+            \textbf{Ausencia de integrantes} 
+        
+        & 
+        
+            Minimización 
+        
+        & 
+        
+            Documentar todo el código y procesos para que cualquier miembro pueda retomar tareas de otro. 
+        
+    \\ \hline
+    
+            \textbf{Nuevos requerimientos del cliente} 
+        
+        & 
+        
+            Prevención 
+        
+        & 
+        
+            Establecer un alcance claro (Scope) y utilizar un mecanismo formal de gestión de cambios. 
+        
+    \\ \hline
+    
+            \textbf{Baja adopción tecnológica} 
+        
+        & 
+        
+            Minimización 
+        
+        & 
+        
+            Crear tutoriales breves y realizar una prueba de usabilidad con un grupo control de adultos mayores. 
+        
+    \\ \hline
+    
+            \textbf{Falla de integración de pagos} 
+        
+        & 
+        
+            Contingencia 
+        
+        & 
+        
+            Tener un plan de respaldo manual para la generación de recibos si la API de pago falla. 
+        
+    \\ \hline
+    
+            \textbf{Falta de experiencia técnica} 
+        
+        & 
+        
+            Prevención 
+        
+        & 
+        
+            Capacitación temprana mediante workshops técnicos o tutoriales sobre notificaciones push. 
+        
+    \\ \hline
+    
+            \textbf{Interfaz poco intuitiva} 
+        
+        & 
+        
+            Prevención 
+        
+        & 
+        
+            Realizar prototipado rápido y validación con usuarios reales antes de la codificación final. 
+        
+    \\ \hline
+    \end{tabularx}
+    \caption{Estrategias para cada riesgo}
+\end{figure}
